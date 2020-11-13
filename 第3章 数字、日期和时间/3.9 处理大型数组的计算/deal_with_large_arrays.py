@@ -34,5 +34,8 @@ print(np.sqrt(y))
 print(np.cos(x))
 
 # 多维数组
-grid = np.zeros(shape=(1000, 1000), dtype=float)
-print(grid)
+# grid = np.zeros(shape=(1000, 1000), dtype=float)
+# print(grid)
+
+
+11111
