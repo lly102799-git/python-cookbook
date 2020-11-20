@@ -23,5 +23,15 @@ class LineHistory:
 
 with open(r'D:\Personal\Desktop\essValidate输入json.txt') as f:
     lines = LineHistory(f)
-    for lineno, hline in lines.history:
-        print('{}:{}'.format(lineno, hline), end='')
+    for _ in lines:  # 触发__iter__()方法，没有不行
+        if _ is not None:
+            for lineno, hline in lines.history:
+                print('{}:{}'.format(lineno, hline), end='')
+
+with open(r'D:\Personal\Desktop\essValidate输入json.txt') as f:
+    lines = LineHistory(f)
+    try:
+        print(next(lines))
+    except TypeError:
+        it = iter(lines)
+        print(next(it))
